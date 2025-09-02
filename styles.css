@@ -1,9 +1,85 @@
-body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #111; color: #fff; }
-header { text-align: center; padding: 20px; background: #222; }
-header h1 { margin: 0; font-size: 2.5rem; }
-header p { color: #ccc; }
-nav a { color: #fff; margin: 0 10px; text-decoration: none; }
-section { padding: 20px; max-width: 800px; margin: auto; }
-.gallery { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; }
-.gallery img { width: 30%; border-radius: 8px; }
-footer { text-align: center; padding: 10px; background: #222; color: #777; }
+/* General reset */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background: #800000; /* Maroon background */
+  color: #ffffff; /* White text */
+  line-height: 1.6;
+}
+
+header {
+  background: #4d0000; /* Darker maroon for header */
+  text-align: center;
+  padding: 20px;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2.5rem;
+  color: #ffffff;
+}
+
+header p {
+  color: #ffd9d9; /* Soft pinkish white for tagline */
+}
+
+nav a {
+  color: #ffffff;
+  margin: 0 15px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: #ffd700; /* Gold accent on hover */
+}
+
+section {
+  padding: 30px;
+  max-width: 900px;
+  margin: 20px auto;
+  background: #b30000; /* Lighter maroon for sections */
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+.gallery {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.gallery img {
+  width: 30%;
+  border-radius: 8px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 20px rgba(255, 215, 0, 0.5);
+}
+
+footer {
+  background: #4d0000;
+  text-align: center;
+  padding: 10px;
+  color: #ffd9d9;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Fade-in animation for sections */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+section, header, footer {
+  animation: fadeIn 1s ease-in-out;
+}
